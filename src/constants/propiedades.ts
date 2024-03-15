@@ -3,10 +3,10 @@ import type { Casa, Terreno } from "../types/types";
 export const casas: Casa[] = [
   {
     codigo: "ED1",
-    nombre: '"Edificio, Colonia Pizzati"',
+    nombre: "Edificio, Colonia Pizzati",
     tipoDePropiedad: "Casa",
     ubicacionGoogleMaps: "https://maps.app.goo.gl/q6ZPgsJdPDYCzGeL7",
-    direccion: '"Colonia Pizzatti en La Ciudad de la Ceiba, Atlántida."',
+    direccion: "Colonia Pizzatti en La Ciudad de la Ceiba, Atlántida.",
     ciudad: "La Ceiba",
     compartidaODirecta: "Compartida",
     precioDolares: 200000,
@@ -107,7 +107,7 @@ export const casas: Casa[] = [
     nombre: "Villa en Palma Real",
     tipoDePropiedad: "Casa",
     ubicacionGoogleMaps: "https://maps.app.goo.gl/73UzFBk3Q2WyHpoY9",
-    direccion: '"Palma Real, La Ceiba Atlantida "',
+    direccion: "Palma Real, La Ceiba Atlantida ",
     ciudad: "La Ceiba",
     compartidaODirecta: "Directa",
     precioDolares: 230000,
@@ -218,7 +218,7 @@ export const casas: Casa[] = [
   },
   {
     codigo: "ED2",
-    nombre: '"Edificio, en Barrio Solares Nuevos"',
+    nombre: "Edificio, en Barrio Solares Nuevos",
     tipoDePropiedad: "Casa",
     ubicacionGoogleMaps: "https://maps.app.goo.gl/p3DVFPsTRjsbFX9V8",
     direccion: "La Ceiba",
@@ -228,7 +228,7 @@ export const casas: Casa[] = [
     precioLempiras: 7000000,
     oferta: "Alquiler",
     observaciones:
-      '"Apartamento 1  de dos habitaciones 10,000  lempiras.    3 apartamentos de 1 habitación 8,000 lempiras cada uno.                                                                                                               Local planta baja 40,000 lempiras negociable      "',
+      "Apartamento 1  de dos habitaciones 10,000  lempiras.    3 apartamentos de 1 habitación 8,000 lempiras cada uno.                                                                                                               Local planta baja 40,000 lempiras negociable      ",
     imagenes: [
       "/ED2/1.jpeg",
       "/ED2/2.jpeg",
@@ -390,7 +390,7 @@ export const casas: Casa[] = [
 export const terrenos: Terreno[] = [
   {
     codigo: "TA1",
-    nombre: '"Terreno en alquiler, Talanga "',
+    nombre: "Terreno en alquiler, Talanga ",
     tipoDePropiedad: "Terreno",
     ubicacionGoogleMaps: "https://maps.app.goo.gl/egYsL85pNuPsdm8m9",
     direccion:
@@ -497,13 +497,13 @@ export const terrenos: Terreno[] = [
     tipoDePropiedad: "Terreno",
     ubicacionGoogleMaps: "https://maps.app.goo.gl/DCyzm7xZGkfRPYb88",
     direccion:
-      '"Aldea de El Ovejo, municipio de Lepaterique, Francisco Morazán, Honduras, C.A"',
+      "Aldea de El Ovejo, municipio de Lepaterique, Francisco Morazán, Honduras, C.A",
     compartidaODirecta: "",
     ciudad: "Francisco Morazan",
     precioDolares: 182333.87,
     precioLempiras: 4500000,
     oferta: "Venta",
-    observaciones: '"Cuenta con café variedad Lempira en producción 16 palos',
+    observaciones: "Cuenta con café variedad Lempira en producción 16 palos",
     imagenes: ["/T25/1.jpeg", "/T25/2.jpeg", "/T25/3.jpeg", "/T25/4.jpeg"],
     varas2: NaN,
     metros2: NaN,
@@ -513,7 +513,7 @@ export const terrenos: Terreno[] = [
     nombre: "Terreno para bodega",
     tipoDePropiedad: "Terreno",
     ubicacionGoogleMaps: "https://maps.app.goo.gl/fGvRg5x3V1Mrh92XA",
-    direccion: '"Al lado de la escuela internacional , Tegucigalpa "',
+    direccion: "Al lado de la escuela internacional , Tegucigalpa ",
     compartidaODirecta: "",
     ciudad: "Francisco Morazan",
     precioDolares: 1050000,
@@ -609,7 +609,7 @@ export const terrenos: Terreno[] = [
     nombre: "10 Manzanas frente al mar en la ceiba",
     tipoDePropiedad: "Terreno",
     ubicacionGoogleMaps: "https://maps.app.goo.gl/oAgPpYnjXBLkPex38",
-    direccion: '"Sector de Coco Pando, con acceso a la calle 8. "',
+    direccion: "Sector de Coco Pando, con acceso a la calle 8. ",
     compartidaODirecta: "Directa",
     ciudad: "La Ceiba",
     precioDolares: 193800,
@@ -625,7 +625,7 @@ export const terrenos: Terreno[] = [
     nombre: "Terreno en valle de angeles",
     tipoDePropiedad: "Terreno",
     ubicacionGoogleMaps: "https://maps.app.goo.gl/TNPdS8HWXxsxbFx68",
-    direccion: '"Valle de Angeles Aldea las Cabañas, el mirador"',
+    direccion: "Valle de Angeles Aldea las Cabañas, el mirador",
     compartidaODirecta: "",
     ciudad: "Francisco Morazan",
     precioDolares: 166733.75,
@@ -641,7 +641,7 @@ export const terrenos: Terreno[] = [
     nombre: "Terreno Ceiba HN",
     tipoDePropiedad: "Terreno",
     ubicacionGoogleMaps: "https://maps.app.goo.gl/cKkQTk6RLbLtnXEs5",
-    direccion: '"La Ceiba, en el Naranjal"',
+    direccion: "La Ceiba, en el Naranjal",
     compartidaODirecta: "Directa",
     ciudad: "La Ceiba",
     precioDolares: 215194.49,
@@ -702,7 +702,7 @@ export const terrenos: Terreno[] = [
   },
   {
     codigo: "T48",
-    nombre: '"Terreno a orilla de playa, se ve enfrente cayos cochinos"',
+    nombre: "Terreno a orilla de playa, se ve enfrente cayos cochinos",
     tipoDePropiedad: "Terreno",
     ubicacionGoogleMaps: "https://maps.app.goo.gl/qcgrGWMASuYY8qeB9",
     direccion: "La Ceiba",
@@ -886,7 +886,7 @@ export const terrenos: Terreno[] = [
   },
   {
     codigo: "T52",
-    nombre: '"7 manzanas en Granadita, La Ceiba"',
+    nombre: "7 manzanas en Granadita, La Ceiba",
     tipoDePropiedad: "Terreno",
     ubicacionGoogleMaps: "https://maps.app.goo.gl/EVVmA4BtDFTD9ZhE6",
     direccion: "La Ceiba",
