@@ -1,0 +1,140 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrCustom from "../../components/TrCustom.astro";
+import { terrenos } from "../../constants/propiedades";
+import { logo } from "./imagenLogoBase64";
+export function getStaticPaths() {
+  return terrenos.map((casa) => {
+    return {
+      params: {
+        codigo: casa.codigo,
+      },
+    };
+  });
+}
+
+const { codigo } = Astro.params;
+
+const terreno = terrenos.find((casa) => casa.codigo === codigo);
+
+const getNumber = (number: number | bigint) => {
+  return new Intl.NumberFormat("en-US").format(number);
+};
+---
+
+<Layout title={codigo}>
+  <main class="m-8">
+    <header class="flex items-end justify-between">
+      <h1 class="text-4xl font-bold">Aloha Home</h1>
+      <img src={logo} alt="imgLogo" class="h-28 rounded-lg" />
+    </header>
+    <section class="mt-8">
+      <table class="w-full">
+        <TrCustom>
+          <span slot="title">Código</span>
+          <span slot="content">{codigo}</span>
+        </TrCustom>
+        <TrCustom>
+          <span slot="title">Nombre</span>
+          <span slot="content">{terreno?.nombre ?? "N/A"}</span>
+        </TrCustom>
+        <TrCustom>
+          <span slot="title">P. Directa o Compartida</span>
+          <span slot="content">{terreno?.compartidaODirecta || "N/A"}</span>
+        </TrCustom>
+        <TrCustom>
+          <span slot="title">Tipo de Propiedad</span>
+          <span slot="content">{terreno?.tipoDePropiedad}</span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">Ubicación</span>
+          <span slot="content">
+            <a
+              target="_blank"
+              class="underline text-blue-700 py-1 px-2 bg-gray-200 rounded-lg flex gap-2"
+              href={terreno?.ubicacionGoogleMaps}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path><path
+                  d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+                ></path></svg
+              >
+              {terreno?.direccion ?? terreno?.direccion} - Click para ver en Google
+              Maps
+            </a>
+          </span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">Ciudad</span>
+          <span slot="content">{terreno?.ciudad}</span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">Precio</span>
+          <span slot="content">
+            <span class="flex flex-col gap-1">
+              <span>
+                L. {getNumber(terreno?.precioLempiras ?? 0)}
+              </span>
+              <span>
+                $ {getNumber(terreno?.precioDolares ?? 0)}
+              </span>
+            </span>
+          </span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">Metros²</span>
+          <span slot="content">
+            {getNumber(terreno?.metros2 ?? 0)}
+          </span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">Varas²</span>
+          <span slot="content">
+            {getNumber(terreno?.varas2 ?? 0)}
+          </span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">Oferta inmobiliaria</span>
+          <span slot="content">
+            {terreno?.oferta}
+          </span>
+        </TrCustom>
+        <TrCustom>
+          <span slot="title">Adicional u Observaciones</span>
+          <span slot="content">{terreno?.observaciones}</span>
+        </TrCustom>
+      </table>
+      <header>
+        <h2 class="text-2xl font-bold mt-8">Galería de Imágenes</h2>
+        <main class="grid grid-cols-2 gap-4">
+          {
+            terreno?.imagenes.map((imagen) => (
+              <img
+                src={imagen}
+                alt="imagen"
+                class="w-full h-64 object-cover rounded-lg"
+              />
+            ))
+          }
+        </main>
+      </header>
+    </section>
+  </main>
+</Layout>

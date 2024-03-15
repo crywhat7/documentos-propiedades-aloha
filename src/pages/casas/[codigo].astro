@@ -1,0 +1,176 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrCustom from "../../components/TrCustom.astro";
+import { casas } from "../../constants/propiedades";
+import { logo } from "./imagenLogoBase64";
+export function getStaticPaths() {
+  return casas.map((casa) => {
+    return {
+      params: {
+        codigo: casa.codigo,
+      },
+    };
+  });
+}
+
+const { codigo } = Astro.params;
+
+const casa = casas.find((casa) => casa.codigo === codigo);
+
+const getNumber = (number: number | bigint) => {
+  return new Intl.NumberFormat("en-US").format(number);
+};
+---
+
+<Layout title={codigo}>
+  <main class="m-8">
+    <header class="flex items-end justify-between">
+      <h1 class="text-4xl font-bold">Aloha Home</h1>
+      <img src={logo} alt="imgLogo" class="h-28 rounded-lg" />
+    </header>
+    <section class="mt-8">
+      <table class="w-full">
+        <TrCustom>
+          <span slot="title">Código</span>
+          <span slot="content">{codigo}</span>
+        </TrCustom>
+        <TrCustom>
+          <span slot="title">Nombre</span>
+          <span slot="content">{casa?.nombre ?? "N/A"}</span>
+        </TrCustom>
+        <TrCustom>
+          <span slot="title">Tipo de Propiedad</span>
+          <span slot="content">{casa?.tipoDePropiedad}</span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">Ubicación</span>
+          <span slot="content">
+            <a
+              target="_blank"
+              class="underline text-blue-700 py-1 px-2 bg-gray-200 rounded-lg flex gap-2"
+              href={casa?.ubicacionGoogleMaps}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path><path
+                  d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+                ></path></svg
+              >
+              {casa?.direccion ?? casa?.direccion} - Click para ver en Google Maps
+            </a>
+          </span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">Ciudad</span>
+          <span slot="content">{casa?.ciudad}</span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">Precio</span>
+          <span slot="content">
+            <span class="flex flex-col gap-1">
+              <span>
+                L. {getNumber(casa?.precioLempiras ?? 0)}
+              </span>
+              <span>
+                $ {getNumber(casa?.precioDolares ?? 0)}
+              </span>
+            </span>
+          </span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">N. de Plantas</span>
+          <span slot="content">{casa?.nPlantas}</span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">N. de Habitaciones</span>
+          <span slot="content">
+            {
+              Number.isNaN(casa?.nHabitaciones ?? NaN)
+                ? "-"
+                : casa?.nHabitaciones
+            }
+          </span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">N. de Baños</span>
+          <span slot="content"
+            >{
+              (Number.isNaN(casa?.nBanios ?? 0) ? null : casa?.nBanios) ?? "-"
+            }</span
+          >
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">N. de Estacionamientos</span>
+          <span slot="content">
+            {Number.isNaN(casa?.nEstacionamientos ?? 0) ? "-" : "-"}
+          </span>
+        </TrCustom>
+
+        <TrCustom>
+          <span slot="title">¿Patio?</span>
+          <span slot="content">
+            <span
+              class={`text-sm px-4 py-1 rounded-lg
+
+              ${casa?.tienePatio ? "bg-green-300" : "bg-red-300"}`}
+            >
+              {casa?.tienePatio ? "Sí" : "No"}
+            </span>
+          </span>
+        </TrCustom>
+        <TrCustom>
+          <span slot="title">¿Amueblado?</span>
+          <span slot="content">
+            <span
+              class={`text-sm px-4 py-1 rounded-lg
+                ${casa?.estaAmueblada ? "bg-green-300" : "bg-red-300"}`}
+            >
+              {casa?.estaAmueblada ? "Sí" : "No"}
+            </span>
+          </span>
+        </TrCustom>
+        <TrCustom>
+          <span slot="title">Oferta inmobiliaria</span>
+          <span slot="content">
+            {casa?.oferta}
+          </span>
+        </TrCustom>
+        <TrCustom>
+          <span slot="title">Adicional u Observaciones</span>
+          <span slot="content">{casa?.observaciones}</span>
+        </TrCustom>
+      </table>
+      <header>
+        <h2 class="text-2xl font-bold mt-8">Galería de Imágenes</h2>
+        <main class="grid grid-cols-2 gap-4">
+          {
+            casa?.imagenes.map((imagen) => (
+              <img
+                src={imagen}
+                alt="imagen"
+                class="w-full h-64 object-cover rounded-lg"
+              />
+            ))
+          }
+        </main>
+      </header>
+    </section>
+  </main>
+</Layout>
