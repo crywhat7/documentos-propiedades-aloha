@@ -18,6 +18,9 @@ const { codigo } = Astro.params;
 const terreno = terrenos.find((casa) => casa.codigo === codigo);
 
 const getNumber = (number: number | bigint) => {
+  const isNan = isNaN(Number(number));
+  if (isNan) return "-";
+
   return new Intl.NumberFormat("en-US").format(number);
 };
 ---
@@ -40,7 +43,7 @@ const getNumber = (number: number | bigint) => {
         </TrCustom>
         <TrCustom>
           <span slot="title">P. Directa o Compartida</span>
-          <span slot="content">{terreno?.compartidaODirecta || "N/A"}</span>
+          <span slot="content">{terreno?.compartidaODirecta || "Directa"}</span>
         </TrCustom>
         <TrCustom>
           <span slot="title">Tipo de Propiedad</span>
@@ -121,9 +124,11 @@ const getNumber = (number: number | bigint) => {
           <span slot="content">{terreno?.observaciones}</span>
         </TrCustom>
       </table>
-      <header>
+      <!-- ! Div para obligar la separación de una página -->
+      <div style="page-break-before: always"></div>
+      <footer>
         <h2 class="text-2xl font-bold mt-8">Galería de Imágenes</h2>
-        <main class="grid grid-cols-2 gap-4">
+        <main class="grid grid-cols-2 gap-4 mt-2">
           {
             terreno?.imagenes.map((imagen) => (
               <img
@@ -134,7 +139,7 @@ const getNumber = (number: number | bigint) => {
             ))
           }
         </main>
-      </header>
+      </footer>
     </section>
   </main>
 </Layout>
