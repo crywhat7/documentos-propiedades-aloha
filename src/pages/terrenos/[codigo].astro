@@ -124,22 +124,19 @@ const getNumber = (number: number | bigint) => {
           <span slot="content">{terreno?.observaciones}</span>
         </TrCustom>
       </table>
-      <!-- ! Div para obligar la separación de una página -->
-      <div style="page-break-before: always"></div>
-      <footer>
-        <h2 class="text-2xl font-bold mt-8">Galería de Imágenes</h2>
-        <main class="grid grid-cols-2 gap-4 mt-2">
-          {
-            terreno?.imagenes.map((imagen) => (
-              <img
-                src={imagen}
-                alt="imagen"
-                class="w-full h-64 object-cover rounded-lg"
-              />
-            ))
-          }
-        </main>
-      </footer>
+      <!-- Div que haga el salto de pagina -->
+      <div class="break-after-page"></div>
+      <main class="grid grid-cols-2 gap-4 mt-2">
+        {
+          terreno?.imagenes.map((imagen) => (
+            <img
+              src={imagen}
+              alt="imagen"
+              class="w-full h-64 object-cover rounded-lg"
+            />
+          ))
+        }
+      </main>
     </section>
   </main>
 </Layout>
