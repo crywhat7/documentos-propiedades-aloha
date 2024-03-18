@@ -1,7 +1,7 @@
 export interface PropiedadBase {
   codigo: string;
   nombre: string;
-  tipoDePropiedad: "Terreno" | "Casa" | "Edificio" | "Apartamento";
+  tipoDePropiedad: "Terreno" | "Casa" | "Edificio" | "Apartamento" | "Local";
   compartidaODirecta: "Compartida" | "Directa" | "";
   ubicacionGoogleMaps: string;
   direccion: string;
