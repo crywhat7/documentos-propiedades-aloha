@@ -177,10 +177,10 @@ const splitArrayIntoPages = (array: string[]) => {
         <tr>
           <td class="font-bold text-2xl">Galeria de Imagenes</td>
         </tr>
-        <tr>
-          {
-            splitArrayIntoPages(casa?.imagenes ?? []).map((imagenes, index) => (
-              <>
+        {
+          splitArrayIntoPages(casa?.imagenes ?? []).map((imagenes, index) => (
+            <>
+              <tr>
                 {index === 0 ? null : <div class="break-after-page" />}
                 <td>
                   <main
@@ -197,10 +197,10 @@ const splitArrayIntoPages = (array: string[]) => {
                     ))}
                   </main>
                 </td>
-              </>
-            ))
-          }
-        </tr>
+              </tr>
+            </>
+          ))
+        }
       </table>
     </section>
   </main>
