@@ -817,8 +817,8 @@ export const terrenos: Terreno[] = [
     oferta: "Venta",
     observaciones: "",
     imagenes: ["/T41/1.jpeg", "/T41/2.jpeg", "/T41/3.jpeg"],
-    varas2: 1240,
-    metros2: 1037.46,
+    varas2: 6000,
+    metros2: 5016,
   },
   {
     codigo: "T42",
