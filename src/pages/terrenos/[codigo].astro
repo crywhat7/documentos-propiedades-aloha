@@ -23,6 +23,14 @@ const getNumber = (number: number | bigint) => {
 
   return new Intl.NumberFormat("en-US").format(number);
 };
+const splitArrayIntoPages = (array: string[]) => {
+  const itemsPorPagina = 10;
+  const paginas = [];
+  for (let i = 0; i < array.length; i += itemsPorPagina) {
+    paginas.push(array.slice(i, i + itemsPorPagina));
+  }
+  return paginas;
+};
 ---
 
 <Layout title={codigo}>
@@ -131,21 +139,30 @@ const getNumber = (number: number | bigint) => {
           <td class="font-bold text-2xl">Galeria de Imagenes</td>
         </tr>
         <tr>
-          <td>
-            <main
-              class={`grid ${terreno?.imagenes?.length ?? 0 > 6 ? "grid-cols-3" : "grid-cols-2"} gap-4 mt-2 w-full`}
-            >
-              {
-                terreno?.imagenes.map((imagen) => (
-                  <img
-                    src={imagen}
-                    alt="imagen"
-                    class="w-full h-64 object-cover rounded-lg"
-                  />
-                ))
-              }
-            </main>
-          </td>
+          {
+            splitArrayIntoPages(terreno?.imagenes ?? []).map(
+              (imagenes, index) => (
+                <>
+                  {index === 0 ? null : <div class="break-after-page" />}
+                  <td>
+                    <main
+                      class={`grid ${
+                        imagenes.length > 6 ? "grid-cols-3" : "grid-cols-2"
+                      } gap-4 mt-2 w-full`}
+                    >
+                      {imagenes.map((imagen) => (
+                        <img
+                          src={imagen}
+                          alt="imagen"
+                          class="w-full h-64 object-cover rounded-lg"
+                        />
+                      ))}
+                    </main>
+                  </td>
+                </>
+              )
+            )
+          }
         </tr>
       </table>
     </section>
