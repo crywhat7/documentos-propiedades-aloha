@@ -425,7 +425,7 @@ export const terrenos: Terreno[] = [
     observaciones: "",
     imagenes: ["/T9/1.jpeg", "/T9/2.jpeg", "/T9/3.jpeg", "/T9/4.jpeg"],
     varas2: 3236,
-    metros2: 2705,
+    metros2: 2261,
   },
   {
     codigo: "T8",
@@ -456,8 +456,8 @@ export const terrenos: Terreno[] = [
     oferta: "Venta",
     observaciones: "",
     imagenes: ["/T7/1.jpeg"],
-    varas2: NaN,
-    metros2: NaN,
+    varas2: 119600,
+    metros2: 83569,
   },
   {
     codigo: "T6",
@@ -473,7 +473,7 @@ export const terrenos: Terreno[] = [
     observaciones: "",
     imagenes: ["/T6/1.jpeg", "/T6/2.jpeg", "/T6/3.jpeg"],
     varas2: 3000,
-    metros2: 2743.2,
+    metros2: 2096,
   },
   {
     codigo: "T3",
@@ -489,7 +489,7 @@ export const terrenos: Terreno[] = [
     observaciones: "",
     imagenes: ["/T3/1.jpeg", "/T3/2.jpeg", "/T3/3.jpeg"],
     varas2: 9267.84,
-    metros2: 7746,
+    metros2: 6475,
   },
   {
     codigo: "T25",
@@ -522,7 +522,7 @@ export const terrenos: Terreno[] = [
     observaciones: "",
     imagenes: ["/T20/1.jpeg", "/T20/2.jpeg", "/T20/3.jpeg"],
     varas2: 3000,
-    metros2: 2507.715,
+    metros2: 2096,
   },
   {
     codigo: "T18",
@@ -538,7 +538,7 @@ export const terrenos: Terreno[] = [
     observaciones: "",
     imagenes: ["/T18/1.jpeg", "/T18/2.jpeg"],
     varas2: 15500,
-    metros2: 12956.53,
+    metros2: 10830,
   },
   {
     codigo: "T13",
@@ -554,7 +554,7 @@ export const terrenos: Terreno[] = [
     observaciones: "",
     imagenes: ["/T13/1.jpeg", "/T13/2.jpeg", "/T13/3.jpeg"],
     varas2: 60000,
-    metros2: 50154.3,
+    metros2: 41928,
   },
   {
     codigo: "T28",
@@ -570,7 +570,7 @@ export const terrenos: Terreno[] = [
     observaciones: "",
     imagenes: ["/T28/1.jpeg", "/T28/2.jpeg"],
     varas2: 1494,
-    metros2: 1249.88,
+    metros2: 1044,
   },
   {
     codigo: "T21",
@@ -585,8 +585,8 @@ export const terrenos: Terreno[] = [
     oferta: "Venta",
     observaciones: "",
     imagenes: ["/T21/1.jpeg", "/T21/2.jpeg"],
-    varas2: 1392,
-    metros2: 1163.58,
+    varas2: 3192,
+    metros2: 2230,
   },
   {
     codigo: "T45",
@@ -602,7 +602,7 @@ export const terrenos: Terreno[] = [
     observaciones: "",
     imagenes: ["/T45/1.jpeg", "/T45/2.jpeg", "/T45/3.jpeg"],
     varas2: 1148.85,
-    metros2: 958.94,
+    metros2: 802,
   },
   {
     codigo: "T2",
@@ -617,8 +617,8 @@ export const terrenos: Terreno[] = [
     oferta: "Venta",
     observaciones: "",
     imagenes: ["/T2/1.jpeg", "/T2/2.jpeg", "/T2/3.jpeg"],
-    varas2: 193.8,
-    metros2: 162,
+    varas2: 119600,
+    metros2: 83569,
   },
   {
     codigo: "T46",
@@ -634,7 +634,7 @@ export const terrenos: Terreno[] = [
     observaciones: "",
     imagenes: ["/T46/1.jpeg", "/T46/2.jpeg"],
     varas2: 3048.14,
-    metros2: 2125.24,
+    metros2: 2130,
   },
   {
     codigo: "T17",
@@ -650,7 +650,7 @@ export const terrenos: Terreno[] = [
     observaciones: "",
     imagenes: ["/T17/1.jpeg", "/T17/2.jpeg", "/T17/3.jpeg", "/T17/4.jpeg"],
     varas2: 1305,
-    metros2: 1090.86,
+    metros2: 911.9,
   },
   {
     codigo: "T14",
@@ -665,7 +665,7 @@ export const terrenos: Terreno[] = [
     oferta: "Venta",
     observaciones: "",
     imagenes: ["/T14/1.jpeg", "/T14/2.jpeg"],
-    varas2: 218.72,
+    varas2: 286.2,
     metros2: 200,
   },
   {
@@ -697,8 +697,8 @@ export const terrenos: Terreno[] = [
     oferta: "Venta",
     observaciones: "",
     imagenes: ["/T47/1.jpeg", "/T47/2.jpeg", "/T47/3.jpeg", "/T47/4.jpeg"],
-    varas2: 228.35,
-    metros2: 209.02,
+    varas2: 299,
+    metros2: 209,
   },
   {
     codigo: "T48",
@@ -722,7 +722,7 @@ export const terrenos: Terreno[] = [
       "/T48/7.jpeg",
     ],
     varas2: 10343.78,
-    metros2: 8656.92,
+    metros2: 7227,
   },
   {
     codigo: "T49",
@@ -802,7 +802,7 @@ export const terrenos: Terreno[] = [
     observaciones: "",
     imagenes: ["/T39/1.jpeg", "/T39/2.jpeg", "/T39/3.jpeg"],
     varas2: 1494,
-    metros2: 1249.68,
+    metros2: 1044,
   },
   {
     codigo: "T41",
@@ -818,7 +818,7 @@ export const terrenos: Terreno[] = [
     observaciones: "",
     imagenes: ["/T41/1.jpeg", "/T41/2.jpeg", "/T41/3.jpeg"],
     varas2: 6000,
-    metros2: 5016,
+    metros2: 4192,
   },
   {
     codigo: "T42",
@@ -849,8 +849,8 @@ export const terrenos: Terreno[] = [
     oferta: "Venta",
     observaciones: "",
     imagenes: ["/T53/1.jpeg", "/T53/2.jpeg", "/T53/3.jpeg", "/T53/4.jpeg"],
-    varas2: 400000,
-    metros2: 334360,
+    varas2: 478400,
+    metros2: 334276,
   },
   {
     codigo: "T54",
@@ -865,8 +865,8 @@ export const terrenos: Terreno[] = [
     oferta: "Venta",
     observaciones: "",
     imagenes: ["/T54/1.jpeg", "/T54/2.jpeg", "/T54/3.jpeg"],
-    varas2: 62720,
-    metros2: 52435,
+    varas2: 155480,
+    metros2: 108640,
   },
   {
     codigo: "T55",
@@ -888,7 +888,7 @@ export const terrenos: Terreno[] = [
       "/T55/5.jpeg",
     ],
     varas2: 525.64,
-    metros2: 366.49,
+    metros2: 367.3,
   },
   {
     codigo: "T52",
@@ -903,7 +903,7 @@ export const terrenos: Terreno[] = [
     oferta: "Venta",
     observaciones: "",
     imagenes: ["/T52/1.jpeg", "/T52/2.jpeg"],
-    varas2: 83748.64,
-    metros2: 70000,
+    varas2: 83720,
+    metros2: 58498,
   },
 ];
