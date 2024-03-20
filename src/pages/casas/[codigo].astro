@@ -132,7 +132,11 @@ const splitArrayIntoPages = (array: string[]) => {
         <TrCustom>
           <span slot="title">N. de Estacionamientos</span>
           <span slot="content">
-            {Number.isNaN(casa?.nEstacionamientos ?? 0) ? "-" : "-"}
+            {
+              Number.isNaN(casa?.nEstacionamientos ?? 0)
+                ? "-"
+                : Number(casa?.nEstacionamientos ?? 0)
+            }
           </span>
         </TrCustom>
 
